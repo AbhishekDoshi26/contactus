@@ -15,4 +15,4 @@ So this package helps the developers to simply add their details.<br>Developers 
 <br><br>
 Best feature is that, when the user clicks on any detail, respective app/web page will be opened.</p>
 <br><br><br>
-![Output](https://github.com/AbhishekDoshi26/contactus/blob/master/example/output/output.jpg)
+![Output](https://raw.githubusercontent.com/AbhishekDoshi26/contactus/master/example/output/output.jpg)
