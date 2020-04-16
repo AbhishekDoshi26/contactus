@@ -11,7 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: any
+  url_launcher: ^5.4.2
+  typicons_flutter: ^0.3.1
 
 dev_dependencies:
   flutter_test:

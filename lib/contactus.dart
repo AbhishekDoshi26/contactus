@@ -1,6 +1,7 @@
 library contactus;
 
 import 'package:flutter/material.dart';
+import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUs extends StatelessWidget {
@@ -24,15 +25,15 @@ class ContactUs extends StatelessWidget {
   bool instaVerify = false;
   ContactUs(
       {@required this.logo,
-        @required String companyName,
-        @required String email,
-        String phoneNumber,
-        String website,
-        String twitterHandle,
-        String linkedinURL,
-        String githubUserName,
-        String tagLine,
-        String instagramUserName}) {
+      @required String companyName,
+      @required String email,
+      String phoneNumber,
+      String website,
+      String twitterHandle,
+      String linkedinURL,
+      String githubUserName,
+      String tagLine,
+      String instagramUserName}) {
     companyName1 = companyName;
     email1 = email;
     if (phoneNumber != null) {
@@ -121,10 +122,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/linkLogo.jpg'),
-                    height: 40.0,
-                  ),
+                  leading: Icon(Typicons.link),
                   title: Text(
                     'Website',
                     style: TextStyle(
@@ -149,10 +147,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/phoneLogo.png'),
-                    height: 30.0,
-                  ),
+                  leading: Icon(Typicons.phone),
                   title: Text(
                     'Phone Number',
                     style: TextStyle(
@@ -175,10 +170,7 @@ class ContactUs extends StatelessWidget {
               ),
               color: Colors.white,
               child: ListTile(
-                leading: Container(
-                  child: Image.asset('images/gmailLogo.png'),
-                  height: 30.0,
-                ),
+                leading: Icon(Typicons.mail),
                 title: Text(
                   'Email ID',
                   style: TextStyle(
@@ -202,10 +194,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/twitterLogo.png'),
-                    height: 40.0,
-                  ),
+                  leading: Icon(Typicons.social_twitter),
                   title: Text(
                     'Twitter',
                     style: TextStyle(
@@ -221,7 +210,6 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: instaVerify,
               child: Card(
-                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -231,10 +219,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/instaLogo.png'),
-                    height: 30.0,
-                  ),
+                  leading: Icon(Typicons.social_instagram),
                   title: Text(
                     'Instagram',
                     style: TextStyle(
@@ -250,7 +235,6 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: githubVerify,
               child: Card(
-                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -260,10 +244,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/githubLogo.png'),
-                    height: 40.0,
-                  ),
+                  leading: Icon(Typicons.social_github),
                   title: Text(
                     'Github',
                     style: TextStyle(
@@ -288,10 +269,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 color: Colors.white,
                 child: ListTile(
-                  leading: Container(
-                    child: Image.asset('images/linkedinLogo.png'),
-                    height: 40.0,
-                  ),
+                  leading: Icon(Typicons.social_linkedin),
                   title: Text(
                     'Linkedin',
                     style: TextStyle(
