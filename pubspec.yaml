@@ -1,7 +1,9 @@
 name: contactus
 description: contactus is the package which helps the developers to add their contact information with ease.Developers can add many important details such as website, email, phone number, etc.
 version: 0.0.1
-homepage: 'https://abhishekdoshi.godaddysites.com'
+author: Abhishek Doshi <adoshi26.ad@gmail.com>
+homepage: https://github.com/AbhishekDoshi26/contactus.git
+
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
