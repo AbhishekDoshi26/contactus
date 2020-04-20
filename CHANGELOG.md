@@ -25,3 +25,6 @@ Formatted the code
 ## [1.0.9] - 20/04/2020.
 Added documentation for contactus package
 
+## [1.1.0] - 20/04/2020.
+Added documentation for contactus package
+
