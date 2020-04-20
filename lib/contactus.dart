@@ -4,25 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class ContactUs extends StatelessWidget {
-  ImageProvider logo;
+  ImageProvider logo; //logo of the company/developer
   ImageProvider linkLogo;
-  String phoneNumber1 = 'phoneNumber';
-  String website1 = 'website';
-  String email1 = 'email';
-  String twitterHandle1 = 'twitter';
-  String linkedinURL1 = 'linkedin';
-  String githubUserName1 = 'github';
-  String companyName1 = 'company';
-  String tagLine1 = 'tagline';
-  String instagram = 'instagram';
-  bool phoneVerify = false;
-  bool websiteVerify = false;
-  bool twitterVerify = false;
-  bool linkedinVerify = false;
-  bool githubVerify = false;
-  bool tagVerify = false;
-  bool instaVerify = false;
+  String phoneNumber1 = 'phoneNumber'; //Phone Number of the developer/company
+  String website1 = 'website'; //Website of the developer/company
+  String email1 = 'email'; //Email ID of the developer/company
+  String twitterHandle1 = 'twitter'; //Twitter Handle of the developer/company
+  String linkedinURL1 = 'linkedin'; //Linkedin URL of the developer/company
+  String githubUserName1 = 'github'; //Github User Name of the developer/company
+  String companyName1 = 'company'; //Name of the developer/company
+  String tagLine1 = 'tagline'; //Tag Line of the developer/company
+  String instagram = 'instagram'; //Instagram User Name of the developer/company
+  bool phoneVerify = false; //Boolean variable to verify whether the data is present.
+  bool websiteVerify = false; //Boolean variable to verify whether the data is present.
+  bool twitterVerify = false; //Boolean variable to verify whether the data is present.
+  bool linkedinVerify = false; //Boolean variable to verify whether the data is present.
+  bool githubVerify = false; //Boolean variable to verify whether the data is present.
+  bool tagVerify = false; //Boolean variable to verify whether the data is present.
+  bool instaVerify = false; //Boolean variable to verify whether the data is present.
   ContactUs(
       {@required this.logo,
       @required String companyName,
