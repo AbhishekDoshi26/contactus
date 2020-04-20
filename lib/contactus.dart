@@ -17,13 +17,20 @@ class ContactUs extends StatelessWidget {
   String companyName1 = 'company'; //Name of the developer/company
   String tagLine1 = 'tagline'; //Tag Line of the developer/company
   String instagram = 'instagram'; //Instagram User Name of the developer/company
-  bool phoneVerify = false; //Boolean variable to verify whether the data is present.
-  bool websiteVerify = false; //Boolean variable to verify whether the data is present.
-  bool twitterVerify = false; //Boolean variable to verify whether the data is present.
-  bool linkedinVerify = false; //Boolean variable to verify whether the data is present.
-  bool githubVerify = false; //Boolean variable to verify whether the data is present.
-  bool tagVerify = false; //Boolean variable to verify whether the data is present.
-  bool instaVerify = false; //Boolean variable to verify whether the data is present.
+  bool phoneVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool websiteVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool twitterVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool linkedinVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool githubVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool tagVerify =
+      false; //Boolean variable to verify whether the data is present.
+  bool instaVerify =
+      false; //Boolean variable to verify whether the data is present.
   ContactUs(
       {@required this.logo,
       @required String companyName,

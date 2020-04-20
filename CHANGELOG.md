@@ -19,3 +19,6 @@ Added Documentation
 ## [1.0.7] - 20/04/2020.
 Added Documentation
 
+## [1.0.8] - 20/04/2020.
+Formatted the code
+
