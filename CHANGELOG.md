@@ -17,8 +17,11 @@ Overcame all the warnings
 Added Documentation
 
 ## [1.0.7] - 20/04/2020.
-Added Documentation
+Added Documentation for external files
 
 ## [1.0.8] - 20/04/2020.
 Formatted the code
+
+## [1.0.9] - 20/04/2020.
+Added documentation for contactus package
 
