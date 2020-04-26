@@ -5,48 +5,48 @@ import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUs extends StatelessWidget {
+  ///Logo of the Company/individual
   final ImageProvider logo;
 
-  ///Logo of the Company/individual
+  ///Phone Number of the company/individual
   final String phoneNumber;
 
-  ///Phone Number of the company/individual
+  ///Website of company/individual
   final String website;
 
-  ///Website of company/individual
+  ///Email ID of company/individual
   final String email;
 
-  ///Email ID of company/individual
+  ///Twitter Handle of Company/Individual
   final String twitterHandle;
 
-  ///Twitter Handle of Company/Individual
+  ///Linkedin URL of company/individual
   final String linkedinURL;
 
-  ///Linkedin URL of company/individual
+  ///Github User Name of the company/individual
   final String githubUserName;
 
-  ///Github User Name of the company/individual
+  ///Name of the Company/individual
   final String companyName;
 
-  ///Name of the Company/individual
+  ///TagLine of the Company or Position of the individual
   final String tagLine;
 
-  ///TagLine of the Company or Position of the individual
+  ///Instagram User Name of the company/individual
   final String instagram;
 
-  ///Instagram User Name of the company/individual
+  ///TextColor of the text which will be displayed on the card.
   final Color textColor;
 
-  ///TextColor of the text which will be displayed on the card.
+  ///Color of the Card.
   final Color cardColor;
 
-  ///Color of the Card.
+  ///Color of the company/individual name displayed.
   final Color companyColor;
 
-  ///Color of the company/individual name displayed.
+  ///Color of the tagLine of the Company/Individual to be displayed.
   final Color taglineColor;
 
-  ///Color of the tagLine of the Company/Individual to be displayed.
   ///Constructor which sets all the values.
   ContactUs({
     @required this.logo,

@@ -34,3 +34,6 @@ Updated the code to make it more effective
 ## [1.1.2] - 26/04/2020.
 Updated the example and added documentation in the main class.
 
+## [1.1.3] - 26/04/2020.
+Updated the documentation in the main class.
+
