@@ -49,7 +49,7 @@ packages:
       name: contactus
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.1"
+    version: "1.1.1"
   convert:
     dependency: transitive
     description:
@@ -196,6 +196,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  typicons_flutter:
+    dependency: transitive
+    description:
+      name: typicons_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.1"
   url_launcher:
     dependency: transitive
     description:

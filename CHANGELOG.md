@@ -28,3 +28,9 @@ Added documentation for contactus package
 ## [1.1.0] - 20/04/2020.
 Added documentation for contactus package
 
+## [1.1.1] - 26/04/2020.
+Updated the code to make it more effective
+
+## [1.1.2] - 26/04/2020.
+Updated the example and added documentation in the main class.
+

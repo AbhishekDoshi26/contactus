@@ -4,75 +4,66 @@ import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-// ignore: must_be_immutable
 class ContactUs extends StatelessWidget {
-  ImageProvider logo; //logo of the company/developer
-  ImageProvider linkLogo;
-  String phoneNumber1 = 'phoneNumber'; //Phone Number of the developer/company
-  String website1 = 'website'; //Website of the developer/company
-  String email1 = 'email'; //Email ID of the developer/company
-  String twitterHandle1 = 'twitter'; //Twitter Handle of the developer/company
-  String linkedinURL1 = 'linkedin'; //Linkedin URL of the developer/company
-  String githubUserName1 = 'github'; //Github User Name of the developer/company
-  String companyName1 = 'company'; //Name of the developer/company
-  String tagLine1 = 'tagline'; //Tag Line of the developer/company
-  String instagram = 'instagram'; //Instagram User Name of the developer/company
-  bool phoneVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool websiteVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool twitterVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool linkedinVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool githubVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool tagVerify =
-      false; //Boolean variable to verify whether the data is present.
-  bool instaVerify =
-      false; //Boolean variable to verify whether the data is present.
-  ContactUs(
-      {@required this.logo,
-      @required String companyName,
-      @required String email,
-      String phoneNumber,
-      String website,
-      String twitterHandle,
-      String linkedinURL,
-      String githubUserName,
-      String tagLine,
-      String instagramUserName}) {
-    companyName1 = companyName;
-    email1 = email;
-    if (phoneNumber != null) {
-      phoneNumber1 = phoneNumber;
-      phoneVerify = true;
-    }
-    if (website != null) {
-      website1 = website;
-      websiteVerify = true;
-    }
-    if (twitterHandle != null) {
-      twitterHandle1 = twitterHandle;
-      twitterVerify = true;
-    }
-    if (linkedinURL != null) {
-      linkedinURL1 = linkedinURL;
-      linkedinVerify = true;
-    }
-    if (githubUserName != null) {
-      githubUserName1 = githubUserName;
-      githubVerify = true;
-    }
-    if (tagLine != null) {
-      tagLine1 = tagLine;
-      tagVerify = true;
-    }
-    if (instagramUserName != null) {
-      instagram = instagramUserName;
-      instaVerify = true;
-    }
-  }
+  final ImageProvider logo;
+
+  ///Logo of the Company/individual
+  final String phoneNumber;
+
+  ///Phone Number of the company/individual
+  final String website;
+
+  ///Website of company/individual
+  final String email;
+
+  ///Email ID of company/individual
+  final String twitterHandle;
+
+  ///Twitter Handle of Company/Individual
+  final String linkedinURL;
+
+  ///Linkedin URL of company/individual
+  final String githubUserName;
+
+  ///Github User Name of the company/individual
+  final String companyName;
+
+  ///Name of the Company/individual
+  final String tagLine;
+
+  ///TagLine of the Company or Position of the individual
+  final String instagram;
+
+  ///Instagram User Name of the company/individual
+  final Color textColor;
+
+  ///TextColor of the text which will be displayed on the card.
+  final Color cardColor;
+
+  ///Color of the Card.
+  final Color companyColor;
+
+  ///Color of the company/individual name displayed.
+  final Color taglineColor;
+
+  ///Color of the tagLine of the Company/Individual to be displayed.
+  ///Constructor which sets all the values.
+  ContactUs({
+    @required this.logo,
+    @required this.companyName,
+    @required this.email,
+    @required this.textColor,
+    @required this.cardColor,
+    @required this.companyColor,
+    @required this.taglineColor,
+    this.phoneNumber,
+    this.website,
+    this.twitterHandle,
+    this.linkedinURL,
+    this.githubUserName,
+    this.tagLine,
+    this.instagram,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -86,20 +77,20 @@ class ContactUs extends StatelessWidget {
               backgroundImage: logo,
             ),
             Text(
-              companyName1,
+              companyName,
               style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontSize: 40.0,
-                color: Colors.white,
+                color: companyColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Visibility(
-              visible: tagVerify,
+              visible: tagLine != null,
               child: Text(
-                tagLine1,
+                tagLine,
                 style: TextStyle(
-                  color: Colors.teal.shade100,
+                  color: taglineColor,
                   fontSize: 20.0,
                   letterSpacing: 2.0,
                   fontWeight: FontWeight.bold,
@@ -119,7 +110,7 @@ class ContactUs extends StatelessWidget {
               height: 10.0,
             ),
             Visibility(
-              visible: websiteVerify,
+              visible: website != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -128,23 +119,23 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.link),
                   title: Text(
                     'Website',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
-                    launch(website1);
+                    launch(website);
                   },
                 ),
               ),
             ),
             Visibility(
-              visible: phoneVerify,
+              visible: phoneNumber != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -153,17 +144,17 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.phone),
                   title: Text(
                     'Phone Number',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
-                    launch('tel:' + phoneNumber1);
+                    launch('tel:' + phoneNumber);
                   },
                 ),
               ),
@@ -176,22 +167,22 @@ class ContactUs extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50.0),
               ),
-              color: Colors.white,
+              color: cardColor,
               child: ListTile(
                 leading: Icon(Typicons.mail),
                 title: Text(
                   'Email ID',
                   style: TextStyle(
-                    color: Colors.teal[900],
+                    color: textColor,
                   ),
                 ),
                 onTap: () {
-                  launch('mailto:' + email1);
+                  launch('mailto:' + email);
                 },
               ),
             ),
             Visibility(
-              visible: twitterVerify,
+              visible: twitterHandle != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -200,23 +191,23 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.social_twitter),
                   title: Text(
                     'Twitter',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
-                    launch('https://twitter.com/' + twitterHandle1);
+                    launch('https://twitter.com/' + twitterHandle);
                   },
                 ),
               ),
             ),
             Visibility(
-              visible: instaVerify,
+              visible: instagram != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -225,13 +216,13 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.social_instagram),
                   title: Text(
                     'Instagram',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
@@ -241,7 +232,7 @@ class ContactUs extends StatelessWidget {
               ),
             ),
             Visibility(
-              visible: githubVerify,
+              visible: githubUserName != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -250,23 +241,23 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.social_github),
                   title: Text(
                     'Github',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
-                    launch('https://github.com/' + githubUserName1);
+                    launch('https://github.com/' + githubUserName);
                   },
                 ),
               ),
             ),
             Visibility(
-              visible: linkedinVerify,
+              visible: linkedinURL != null,
               child: Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -275,17 +266,17 @@ class ContactUs extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
-                color: Colors.white,
+                color: cardColor,
                 child: ListTile(
                   leading: Icon(Typicons.social_linkedin),
                   title: Text(
                     'Linkedin',
                     style: TextStyle(
-                      color: Colors.teal[900],
+                      color: textColor,
                     ),
                   ),
                   onTap: () {
-                    launch(linkedinURL1);
+                    launch(linkedinURL);
                   },
                 ),
               ),

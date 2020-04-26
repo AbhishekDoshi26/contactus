@@ -1,10 +1,6 @@
 import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,16 +9,20 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: ContactUs(
+          cardColor: Colors.white,
+          textColor: Colors.teal.shade900,
           logo: AssetImage('images/crop.jpg'),
           email: 'adoshi26.ad@gmail.com',
           companyName: 'Abhishek Doshi',
+          companyColor: Colors.teal.shade100,
           phoneNumber: '+917818044311',
           website: 'https://abhishekdoshi.godaddysites.com',
           githubUserName: 'AbhishekDoshi26',
           linkedinURL: 'https://www.linkedin.com/in/abhishek-doshi-520983199/',
           tagLine: 'Flutter Developer',
+          taglineColor: Colors.teal.shade100,
           twitterHandle: 'AbhishekDoshi26',
-          instagramUserName: '_abhishek_doshi',
+          instagram: '_abhishek_doshi',
         ),
       ),
     );
