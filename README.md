@@ -18,7 +18,7 @@ Developers can add following details:<br>
 Best feature is that, when the user clicks on any detail, respective app/web page will be opened.<br><br>
 <b>Now you can also add the contact details as a part of your bottomNavigationBar</b></p>
 <br><br><br>
-<h3>Example Code</h3>
+<h3>Example Code for creating an entire page</h3>
 <br><br>
 
 ```
@@ -54,8 +54,19 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-
+<h3>Example Code for adding details in bottomNavigationBar</h3>
 <br><br><br>
+
+```
+bottomNavigationBar: ContactUsBottomAppBar(
+          companyName: 'Abhishek Doshi',
+          textColor: Colors.white,
+          backgroundColor: Colors.teal.shade300,
+          email: 'adoshi26.ad@gmail.com',
+        ),
+```
+
+<br><br>
 <h3>Output</h3>
 
 ![Output](https://raw.githubusercontent.com/AbhishekDoshi26/contactus/master/example/output/output.jpg)
