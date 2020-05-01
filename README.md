@@ -2,7 +2,7 @@
 <br><br>
 <p>The most common functionality added in any commercial app is the Developer's contact details!!<br>
 So this package helps the developers to simply add their details.<br>
-<b>Now you can also add the contact details as a part of your bottomNavigationBar</b><br><br>
+<h3><b>Now you can also add the contact details as a part of your bottomNavigationBar</b></h3><br><br>
 Developers can add following details:<br>
 <ul>
 	<li>Company Name</li>
@@ -16,7 +16,7 @@ Developers can add following details:<br>
 </ul>
 <br><br>
 Best feature is that, when the user clicks on any detail, respective app/web page will be opened.<br><br>
-<b>Now you can also add the contact details as a part of your bottomNavigationBar</b></p>
+<b><h3>Now you can also add the contact details as a part of your bottomNavigationBar</h3></b></p>
 <br><br><br>
 <h3>Example Code for creating an entire page</h3>
 <br><br>
@@ -53,9 +53,8 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-
-<h3>Example Code for adding details in bottomNavigationBar</h3>
 <br><br><br>
+<h3>Example Code for adding details in bottomNavigationBar</h3>
 
 ```
 bottomNavigationBar: ContactUsBottomAppBar(
