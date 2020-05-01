@@ -46,10 +46,10 @@ packages:
   contactus:
     dependency: "direct main"
     description:
-      name: contactus
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.1"
+      path: "D:\\flutter\\contact_us"
+      relative: false
+    source: path
+    version: "1.1.4"
   convert:
     dependency: transitive
     description:

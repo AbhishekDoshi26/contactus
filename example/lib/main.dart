@@ -7,6 +7,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        bottomNavigationBar: ContactUsBottomAppBar(
+          companyName: 'Abhishek Doshi',
+          textColor: Colors.white,
+          backgroundColor: Colors.teal.shade300,
+          email: 'adoshi26.ad@gmail.com',
+        ),
         backgroundColor: Colors.teal,
         body: ContactUs(
           cardColor: Colors.white,

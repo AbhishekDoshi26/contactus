@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+///Class for adding contact details/profile details as a complete new page in your flutter app.
 class ContactUs extends StatelessWidget {
   ///Logo of the Company/individual
   final ImageProvider logo;
@@ -284,6 +285,47 @@ class ContactUs extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+///Class for adding contact details of the developer in your bottomNavigationBar in your flutter app.
+class ContactUsBottomAppBar extends StatelessWidget {
+  ///Color of the text which will be displayed in the bottomNavigationBar
+  final Color textColor;
+
+  ///Color of the background of the bottomNavigationBar
+  final Color backgroundColor;
+
+  ///Email ID Of the company/developer on which, when clicked by the user, the respective mail app will be opened.
+  final String email;
+
+  ///Name of the company or the developer
+  final String companyName;
+
+  ///Size of the font in bottomNavigationBar
+  final double fontSize;
+
+  ContactUsBottomAppBar(
+      {@required this.textColor,
+      @required this.backgroundColor,
+      @required this.email,
+      @required this.companyName,
+      this.fontSize = 15.0});
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      color: backgroundColor,
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
+      child: Text(
+        'Designed and Developed by $companyName 💙\nWant to contact?',
+        textAlign: TextAlign.center,
+        style: TextStyle(color: textColor, fontSize: fontSize),
+      ),
+      onPressed: () {
+        launch('mailto:$email');
+      },
     );
   }
 }
