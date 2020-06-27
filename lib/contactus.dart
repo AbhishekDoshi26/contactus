@@ -121,7 +121,7 @@ class ContactUs extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Typicons.link),
                   title: Text(
-                    'Website',
+                    'Webseite',
                     style: TextStyle(
                       color: textColor,
                     ),
@@ -146,7 +146,7 @@ class ContactUs extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Typicons.phone),
                   title: Text(
-                    'Phone Number',
+                    'Telefonnummer',
                     style: TextStyle(
                       color: textColor,
                     ),
@@ -169,7 +169,7 @@ class ContactUs extends StatelessWidget {
               child: ListTile(
                 leading: Icon(Typicons.mail),
                 title: Text(
-                  'Email ID',
+                  'Email Adresse',
                   style: TextStyle(
                     color: textColor,
                   ),
