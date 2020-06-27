@@ -73,7 +73,7 @@ class ContactUs extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            logo ?? Image.asset(logo),
+            logo != null ? Image.asset(logo) : SizedBox.shrink(),
             Text(
               companyName,
               style: TextStyle(
