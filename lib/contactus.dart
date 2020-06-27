@@ -78,7 +78,7 @@ class ContactUs extends StatelessWidget {
               companyName,
               style: TextStyle(
                 fontFamily: 'Pacifico',
-                fontSize: 40.0,
+                fontSize: 30.0,
                 color: companyColor,
                 fontWeight: FontWeight.bold,
               ),
@@ -86,7 +86,7 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: tagLine != null,
               child: Text(
-                tagLine,
+                tagLine ?? "",
                 style: TextStyle(
                   color: taglineColor,
                   fontSize: 20.0,
