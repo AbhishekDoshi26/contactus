@@ -50,7 +50,7 @@ class ContactUs extends StatelessWidget {
 
   ///Constructor which sets all the values.
   ContactUs({
-    @required this.logo,
+    this.logo,
     @required this.companyName,
     @required this.email,
     @required this.textColor,
