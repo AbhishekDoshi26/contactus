@@ -15,14 +15,26 @@ class ContactUs extends StatelessWidget {
   ///Phone Number of the company/individual
   final String phoneNumber;
 
+  ///Text for Phonenumber
+  final String phoneNumberText;
+
   ///Website of company/individual
   final String website;
+
+  ///Text for Website
+  final String websiteText;
 
   ///Email ID of company/individual
   final String email;
 
+  ///Text for Email
+  final String emailText;
+
   ///Twitter Handle of Company/Individual
   final String twitterHandle;
+
+  ///Facebook Handle of Company/Individual
+  final String facebookHandle;
 
   ///Linkedin URL of company/individual
   final String linkedinURL;
@@ -54,16 +66,20 @@ class ContactUs extends StatelessWidget {
   ///Constructor which sets all the values.
   ContactUs({
     @required this.companyName,
-    @required this.email,
     @required this.textColor,
     @required this.cardColor,
     @required this.companyColor,
     @required this.taglineColor,
+    @required this.email,
+    this.emailText,
     this.logo,
     this.image,
     this.phoneNumber,
+    this.phoneNumberText,
     this.website,
+    this.websiteText,
     this.twitterHandle,
+    this.facebookHandle,
     this.linkedinURL,
     this.githubUserName,
     this.tagLine,
@@ -135,7 +151,7 @@ class ContactUs extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Typicons.link),
                   title: Text(
-                    'Website',
+                    websiteText ?? 'Website',
                     style: TextStyle(
                       color: textColor,
                     ),
@@ -160,7 +176,7 @@ class ContactUs extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Typicons.phone),
                   title: Text(
-                    'Phone Number',
+                    phoneNumberText ?? 'Phone Number',
                     style: TextStyle(
                       color: textColor,
                     ),
@@ -183,7 +199,7 @@ class ContactUs extends StatelessWidget {
               child: ListTile(
                 leading: Icon(Typicons.mail),
                 title: Text(
-                  'Email ID',
+                  emailText ?? 'Email ID',
                   style: TextStyle(
                     color: textColor,
                   ),
@@ -214,6 +230,31 @@ class ContactUs extends StatelessWidget {
                   ),
                   onTap: () {
                     launch('https://twitter.com/' + twitterHandle);
+                  },
+                ),
+              ),
+            ),
+            Visibility(
+              visible: facebookHandle != null,
+              child: Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                color: cardColor,
+                child: ListTile(
+                  leading: Icon(Typicons.social_facebook),
+                  title: Text(
+                    'Facebook',
+                    style: TextStyle(
+                      color: textColor,
+                    ),
+                  ),
+                  onTap: () {
+                    launch('https://www.facebook.com/' + facebookHandle);
                   },
                 ),
               ),
