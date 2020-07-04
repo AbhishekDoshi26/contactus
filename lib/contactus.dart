@@ -45,6 +45,9 @@ class ContactUs extends StatelessWidget {
   ///Name of the Company/individual
   final String companyName;
 
+  ///Font size of Company name
+  final double companyFontSize;
+
   ///TagLine of the Company or Position of the individual
   final String tagLine;
 
@@ -84,6 +87,7 @@ class ContactUs extends StatelessWidget {
     this.githubUserName,
     this.tagLine,
     this.instagram,
+    this.companyFontSize
   });
 
   @override
@@ -108,7 +112,7 @@ class ContactUs extends StatelessWidget {
               companyName,
               style: TextStyle(
                 fontFamily: 'Pacifico',
-                fontSize: 40.0,
+                fontSize: companyFontSize ?? 40.0,
                 color: companyColor,
                 fontWeight: FontWeight.bold,
               ),
