@@ -40,4 +40,6 @@ Updated the documentation in the main class.
 ## [1.1.4] - 01/05/2020.
 Added the functionality to add the contact details in bottomNavigationBar
 
+## [1.1.5] - 27/07/2020.
+Added the functionality to add the contact details in bottomNavigationBar
 
