@@ -11,6 +11,7 @@ Developers can add following details:<br>
 	<li>Email ID</li>
 	<li>Twitter Handle</li>
 	<li>Instagram ID</li>
+	<li>Facebook ID</li>
 	<li>Linkedin URL</li>
 	<li>Github UserName</li>
 </ul>
