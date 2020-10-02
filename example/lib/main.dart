@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         body: ContactUs(
           cardColor: Colors.white,
           textColor: Colors.teal.shade900,
-          logo: AssetImage('images/crop.jpg'),
+          logo: AssetImage('images/logo.jpg'),
           email: 'adoshi26.ad@gmail.com',
           companyName: 'Abhishek Doshi',
           companyColor: Colors.teal.shade100,
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
           taglineColor: Colors.teal.shade100,
           twitterHandle: 'AbhishekDoshi26',
           instagram: '_abhishek_doshi',
+          facebookHandle: '_abhishek_doshi'
         ),
       ),
     );
