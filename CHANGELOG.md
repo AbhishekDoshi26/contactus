@@ -46,3 +46,6 @@ Added the functionality to add the contact details in bottomNavigationBar
 ## [1.1.6] - 02/10/2020.
 Added functionality to launch Facebook
 
+## [1.1.7] - 02/10/2020.
+Updated Dependencies
+

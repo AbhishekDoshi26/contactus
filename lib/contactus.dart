@@ -67,28 +67,27 @@ class ContactUs extends StatelessWidget {
   final Color taglineColor;
 
   ///Constructor which sets all the values.
-  ContactUs({
-    @required this.companyName,
-    @required this.textColor,
-    @required this.cardColor,
-    @required this.companyColor,
-    @required this.taglineColor,
-    @required this.email,
-    this.emailText,
-    this.logo,
-    this.image,
-    this.phoneNumber,
-    this.phoneNumberText,
-    this.website,
-    this.websiteText,
-    this.twitterHandle,
-    this.facebookHandle,
-    this.linkedinURL,
-    this.githubUserName,
-    this.tagLine,
-    this.instagram,
-    this.companyFontSize
-  });
+  ContactUs(
+      {@required this.companyName,
+      @required this.textColor,
+      @required this.cardColor,
+      @required this.companyColor,
+      @required this.taglineColor,
+      @required this.email,
+      this.emailText,
+      this.logo,
+      this.image,
+      this.phoneNumber,
+      this.phoneNumberText,
+      this.website,
+      this.websiteText,
+      this.twitterHandle,
+      this.facebookHandle,
+      this.linkedinURL,
+      this.githubUserName,
+      this.tagLine,
+      this.instagram,
+      this.companyFontSize});
 
   @override
   Widget build(BuildContext context) {
@@ -97,17 +96,15 @@ class ContactUs extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Visibility (
+            Visibility(
               visible: logo != null,
               child: CircleAvatar(
                 radius: 50.0,
                 backgroundImage: logo,
               ),
             ),
-            Visibility (
-              visible: image != null,
-              child: image ?? SizedBox.shrink()
-            ),
+            Visibility(
+                visible: image != null, child: image ?? SizedBox.shrink()),
             Text(
               companyName,
               style: TextStyle(
