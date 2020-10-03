@@ -89,6 +89,53 @@ class ContactUs extends StatelessWidget {
       this.instagram,
       this.companyFontSize});
 
+  showAlert(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          elevation: 8.0,
+          contentPadding: EdgeInsets.all(18.0),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+          content: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                InkWell(
+                  onTap: () => launch('tel:' + phoneNumber),
+                  child: Container(
+                    height: 50.0,
+                    alignment: Alignment.center,
+                    child: Text('Call'),
+                  ),
+                ),
+                Divider(),
+                InkWell(
+                  onTap: () => launch('sms:' + phoneNumber),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50.0,
+                    child: Text('Message'),
+                  ),
+                ),
+                Divider(),
+                InkWell(
+                  onTap: () => launch('https://wa.me/' + phoneNumber),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50.0,
+                    child: Text('WhatsApp'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -141,6 +188,7 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: website != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -157,15 +205,14 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch(website);
-                  },
+                  onTap: () => launch(website),
                 ),
               ),
             ),
             Visibility(
               visible: phoneNumber != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -182,13 +229,12 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch('tel:' + phoneNumber);
-                  },
+                  onTap: () => showAlert(context),
                 ),
               ),
             ),
             Card(
+              clipBehavior: Clip.antiAlias,
               margin: EdgeInsets.symmetric(
                 vertical: 10.0,
                 horizontal: 25.0,
@@ -205,14 +251,13 @@ class ContactUs extends StatelessWidget {
                     color: textColor,
                   ),
                 ),
-                onTap: () {
-                  launch('mailto:' + email);
-                },
+                onTap: () => launch('mailto:' + email),
               ),
             ),
             Visibility(
               visible: twitterHandle != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -229,15 +274,14 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch('https://twitter.com/' + twitterHandle);
-                  },
+                  onTap: () => launch('https://twitter.com/' + twitterHandle),
                 ),
               ),
             ),
             Visibility(
               visible: facebookHandle != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -254,15 +298,14 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch('https://www.facebook.com/' + facebookHandle);
-                  },
+                  onTap: () => launch('https://www.facebook.com/' + facebookHandle),
                 ),
               ),
             ),
             Visibility(
               visible: instagram != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -279,15 +322,14 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch('https://instagram.com/' + instagram);
-                  },
+                  onTap: () => launch('https://instagram.com/' + instagram),
                 ),
               ),
             ),
             Visibility(
               visible: githubUserName != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -304,15 +346,14 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch('https://github.com/' + githubUserName);
-                  },
+                  onTap: () => launch('https://github.com/' + githubUserName),
                 ),
               ),
             ),
             Visibility(
               visible: linkedinURL != null,
               child: Card(
+                clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
@@ -329,9 +370,7 @@ class ContactUs extends StatelessWidget {
                       color: textColor,
                     ),
                   ),
-                  onTap: () {
-                    launch(linkedinURL);
-                  },
+                  onTap: () => launch(linkedinURL),
                 ),
               ),
             ),
@@ -376,9 +415,7 @@ class ContactUsBottomAppBar extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(color: textColor, fontSize: fontSize),
       ),
-      onPressed: () {
-        launch('mailto:$email');
-      },
+      onPressed: () => launch('mailto:$email'),
     );
   }
 }
