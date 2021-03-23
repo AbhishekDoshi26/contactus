@@ -79,8 +79,8 @@ class ContactUs extends StatelessWidget {
   final Color dividerColor;
 
   ///font weight for tagline and company name
-  final String companyFontWeight;
-  final String taglineFontWeight;
+  final FontWeight companyFontWeight;
+  final FontWeight taglineFontWeight;
 
   ///Constructor which sets all the values.
   ContactUs({
