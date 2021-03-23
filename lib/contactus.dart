@@ -81,6 +81,8 @@ class ContactUs extends StatelessWidget {
   ///font weight for tagline and company name
   final FontWeight companyFontWeight;
   final FontWeight taglineFontWeight;
+  /// avatar radius will place the circularavatar according to developer/UI need
+  final double avatarRadius;
 
   ///Constructor which sets all the values.
   ContactUs({
@@ -110,6 +112,7 @@ class ContactUs extends StatelessWidget {
     this.dividerColor,
     this.companyFontWeight,
     this.taglineFontWeight,
+    this.avatarRadius,
   });
 
   showAlert(BuildContext context) {
@@ -170,7 +173,7 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: logo != null,
               child: CircleAvatar(
-                radius: 50.0,
+                radius: avatarRadius ?? 50.0,
                 backgroundImage: logo,
               ),
             ),
