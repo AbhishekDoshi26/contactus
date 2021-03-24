@@ -447,11 +447,12 @@ class ContactUsBottomAppBar extends StatelessWidget {
       });
   @override
   Widget build(BuildContext context) {
-    // ignore: deprecated_member_use
-    return FlatButton(
-      color: backgroundColor,
-      highlightColor: Colors.transparent,
-      splashColor: Colors.transparent,
+    return TextButton(
+      style: TextButton.styleFrom(
+        backgroundColor: backgroundColor,
+        onSurface: Colors.grey,
+        shadowColor: Colors.transparent,
+      ),
       child: Text(
         'Designed and Developed by $companyName 💙\nWant to contact?',
         textAlign: TextAlign.center,
