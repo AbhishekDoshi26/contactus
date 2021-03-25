@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
           textColor: Colors.white,
           backgroundColor: Colors.teal.shade300,
           email: 'adoshi26.ad@gmail.com',
+          // textFont: 'Sail',
         ),
         backgroundColor: Colors.teal,
         body: ContactUs(

@@ -3,6 +3,7 @@
 <p>The most common functionality added in any commercial app is the Developer's contact details!!<br>
 So this package helps the developers to simply add their details.<br>
 <h3><b>Now you can also add the contact details as a part of your bottomNavigationBar</b></h3><br><br>
+<h3><b>Now you can add customizedable fonts for company/individual name, tagline & text along with the custom color for divider and font weights.</b></h3><br><br>
 Developers can add following details:<br>
 <ul>
 	<li>Company Name</li>

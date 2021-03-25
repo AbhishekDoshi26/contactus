@@ -66,28 +66,54 @@ class ContactUs extends StatelessWidget {
   ///Color of the tagLine of the Company/Individual to be displayed.
   final Color taglineColor;
 
+  /// font of text
+  final String textFont;
+
+  /// font of the company/individul to be displayed
+  final String companyFont;
+
+  /// font of the tagline to be displayed
+  final String taglineFont;
+
+  /// divider color which is placed between the tagline & contact informations
+  final Color dividerColor;
+
+  ///font weight for tagline and company name
+  final FontWeight companyFontWeight;
+  final FontWeight taglineFontWeight;
+  /// avatar radius will place the circularavatar according to developer/UI need
+  final double avatarRadius;
+
   ///Constructor which sets all the values.
-  ContactUs(
-      {@required this.companyName,
-      @required this.textColor,
-      @required this.cardColor,
-      @required this.companyColor,
-      @required this.taglineColor,
-      @required this.email,
-      this.emailText,
-      this.logo,
-      this.image,
-      this.phoneNumber,
-      this.phoneNumberText,
-      this.website,
-      this.websiteText,
-      this.twitterHandle,
-      this.facebookHandle,
-      this.linkedinURL,
-      this.githubUserName,
-      this.tagLine,
-      this.instagram,
-      this.companyFontSize});
+  ContactUs({
+    @required this.companyName,
+    @required this.textColor,
+    @required this.cardColor,
+    @required this.companyColor,
+    @required this.taglineColor,
+    @required this.email,
+    this.emailText,
+    this.logo,
+    this.image,
+    this.phoneNumber,
+    this.phoneNumberText,
+    this.website,
+    this.websiteText,
+    this.twitterHandle,
+    this.facebookHandle,
+    this.linkedinURL,
+    this.githubUserName,
+    this.tagLine,
+    this.instagram,
+    this.companyFontSize,
+    this.textFont,
+    this.companyFont,
+    this.taglineFont,
+    this.dividerColor,
+    this.companyFontWeight,
+    this.taglineFontWeight,
+    this.avatarRadius,
+  });
 
   showAlert(BuildContext context) {
     showDialog(
@@ -96,7 +122,8 @@ class ContactUs extends StatelessWidget {
         return AlertDialog(
           elevation: 8.0,
           contentPadding: EdgeInsets.all(18.0),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
           content: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,7 +173,7 @@ class ContactUs extends StatelessWidget {
             Visibility(
               visible: logo != null,
               child: CircleAvatar(
-                radius: 50.0,
+                radius: avatarRadius ?? 50.0,
                 backgroundImage: logo,
               ),
             ),
@@ -155,10 +182,10 @@ class ContactUs extends StatelessWidget {
             Text(
               companyName,
               style: TextStyle(
-                fontFamily: 'Pacifico',
+                fontFamily: companyFont ?? 'Pacifico',
                 fontSize: companyFontSize ?? 40.0,
                 color: companyColor,
-                fontWeight: FontWeight.bold,
+                fontWeight: companyFontWeight ?? FontWeight.bold,
               ),
             ),
             Visibility(
@@ -166,10 +193,11 @@ class ContactUs extends StatelessWidget {
               child: Text(
                 tagLine ?? "",
                 style: TextStyle(
+                  fontFamily: taglineFont ?? 'Pacifico',
                   color: taglineColor,
                   fontSize: 20.0,
                   letterSpacing: 2.0,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: taglineFontWeight?? FontWeight.bold,
                 ),
               ),
             ),
@@ -177,7 +205,7 @@ class ContactUs extends StatelessWidget {
               height: 10.0,
             ),
             Divider(
-              color: Colors.teal[200],
+              color: dividerColor ?? Colors.teal[200],
               thickness: 4,
               indent: 50.0,
               endIndent: 50.0,
@@ -203,6 +231,7 @@ class ContactUs extends StatelessWidget {
                     websiteText ?? 'Website',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => launch(website),
@@ -227,6 +256,7 @@ class ContactUs extends StatelessWidget {
                     phoneNumberText ?? 'Phone Number',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => showAlert(context),
@@ -249,6 +279,7 @@ class ContactUs extends StatelessWidget {
                   emailText ?? 'Email ID',
                   style: TextStyle(
                     color: textColor,
+                    fontFamily: textFont,
                   ),
                 ),
                 onTap: () => launch('mailto:' + email),
@@ -272,6 +303,7 @@ class ContactUs extends StatelessWidget {
                     'Twitter',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => launch('https://twitter.com/' + twitterHandle),
@@ -296,9 +328,11 @@ class ContactUs extends StatelessWidget {
                     'Facebook',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://www.facebook.com/' + facebookHandle),
+                  onTap: () =>
+                      launch('https://www.facebook.com/' + facebookHandle),
                 ),
               ),
             ),
@@ -320,6 +354,7 @@ class ContactUs extends StatelessWidget {
                     'Instagram',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => launch('https://instagram.com/' + instagram),
@@ -344,6 +379,7 @@ class ContactUs extends StatelessWidget {
                     'Github',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => launch('https://github.com/' + githubUserName),
@@ -368,6 +404,7 @@ class ContactUs extends StatelessWidget {
                     'Linkedin',
                     style: TextStyle(
                       color: textColor,
+                      fontFamily: textFont,
                     ),
                   ),
                   onTap: () => launch(linkedinURL),
@@ -397,23 +434,29 @@ class ContactUsBottomAppBar extends StatelessWidget {
 
   ///Size of the font in bottomNavigationBar
   final double fontSize;
+  /// font of text
+  final String textFont;
 
   ContactUsBottomAppBar(
       {@required this.textColor,
       @required this.backgroundColor,
       @required this.email,
       @required this.companyName,
-      this.fontSize = 15.0});
+      this.fontSize = 15.0,
+      this.textFont,
+      });
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      color: backgroundColor,
-      highlightColor: Colors.transparent,
-      splashColor: Colors.transparent,
+    return TextButton(
+      style: TextButton.styleFrom(
+        backgroundColor: backgroundColor,
+        onSurface: Colors.grey,
+        shadowColor: Colors.transparent,
+      ),
       child: Text(
         'Designed and Developed by $companyName 💙\nWant to contact?',
         textAlign: TextAlign.center,
-        style: TextStyle(color: textColor, fontSize: fontSize),
+        style: TextStyle(color: textColor, fontSize: fontSize, fontFamily: textFont),
       ),
       onPressed: () => launch('mailto:$email'),
     );

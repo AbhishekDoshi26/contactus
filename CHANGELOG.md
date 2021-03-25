@@ -49,3 +49,6 @@ Added functionality to launch Facebook
 ## [1.1.7] - 02/10/2020.
 Updated Dependencies
 
+## [1.1.8] - 23/03/2021
+Now, you can add custom fonts, font weight and divider color according to the theme of your product.
+
