@@ -7,52 +7,52 @@ import 'package:url_launcher/url_launcher.dart';
 ///Class for adding contact details/profile details as a complete new page in your flutter app.
 class ContactUs extends StatelessWidget {
   ///Logo of the Company/individual
-  final ImageProvider logo;
+  final ImageProvider? logo;
 
   ///Ability to add an image
-  final Image image;
+  final Image? image;
 
   ///Phone Number of the company/individual
-  final String phoneNumber;
+  final String? phoneNumber;
 
   ///Text for Phonenumber
-  final String phoneNumberText;
+  final String? phoneNumberText;
 
   ///Website of company/individual
-  final String website;
+  final String? website;
 
   ///Text for Website
-  final String websiteText;
+  final String? websiteText;
 
   ///Email ID of company/individual
   final String email;
 
   ///Text for Email
-  final String emailText;
+  final String? emailText;
 
   ///Twitter Handle of Company/Individual
-  final String twitterHandle;
+  final String? twitterHandle;
 
   ///Facebook Handle of Company/Individual
-  final String facebookHandle;
+  final String? facebookHandle;
 
   ///Linkedin URL of company/individual
-  final String linkedinURL;
+  final String? linkedinURL;
 
   ///Github User Name of the company/individual
-  final String githubUserName;
+  final String? githubUserName;
 
   ///Name of the Company/individual
   final String companyName;
 
   ///Font size of Company name
-  final double companyFontSize;
+  final double? companyFontSize;
 
   ///TagLine of the Company or Position of the individual
-  final String tagLine;
+  final String? tagLine;
 
   ///Instagram User Name of the company/individual
-  final String instagram;
+  final String? instagram;
 
   ///TextColor of the text which will be displayed on the card.
   final Color textColor;
@@ -67,31 +67,31 @@ class ContactUs extends StatelessWidget {
   final Color taglineColor;
 
   /// font of text
-  final String textFont;
+  final String? textFont;
 
   /// font of the company/individul to be displayed
-  final String companyFont;
+  final String? companyFont;
 
   /// font of the tagline to be displayed
-  final String taglineFont;
+  final String? taglineFont;
 
   /// divider color which is placed between the tagline & contact informations
-  final Color dividerColor;
+  final Color? dividerColor;
 
   ///font weight for tagline and company name
-  final FontWeight companyFontWeight;
-  final FontWeight taglineFontWeight;
+  final FontWeight? companyFontWeight;
+  final FontWeight? taglineFontWeight;
   /// avatar radius will place the circularavatar according to developer/UI need
-  final double avatarRadius;
+  final double? avatarRadius;
 
   ///Constructor which sets all the values.
   ContactUs({
-    @required this.companyName,
-    @required this.textColor,
-    @required this.cardColor,
-    @required this.companyColor,
-    @required this.taglineColor,
-    @required this.email,
+    required this.companyName,
+    required this.textColor,
+    required this.cardColor,
+    required this.companyColor,
+    required this.taglineColor,
+    required this.email,
     this.emailText,
     this.logo,
     this.image,
@@ -130,7 +130,7 @@ class ContactUs extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: () => launch('tel:' + phoneNumber),
+                  onTap: () => launch('tel:' + phoneNumber!),
                   child: Container(
                     height: 50.0,
                     alignment: Alignment.center,
@@ -139,7 +139,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 Divider(),
                 InkWell(
-                  onTap: () => launch('sms:' + phoneNumber),
+                  onTap: () => launch('sms:' + phoneNumber!),
                   child: Container(
                     alignment: Alignment.center,
                     height: 50.0,
@@ -148,7 +148,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 Divider(),
                 InkWell(
-                  onTap: () => launch('https://wa.me/' + phoneNumber),
+                  onTap: () => launch('https://wa.me/' + phoneNumber!),
                   child: Container(
                     alignment: Alignment.center,
                     height: 50.0,
@@ -234,7 +234,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch(website),
+                  onTap: () => launch(website!),
                 ),
               ),
             ),
@@ -306,7 +306,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://twitter.com/' + twitterHandle),
+                  onTap: () => launch('https://twitter.com/' + twitterHandle!),
                 ),
               ),
             ),
@@ -332,7 +332,7 @@ class ContactUs extends StatelessWidget {
                     ),
                   ),
                   onTap: () =>
-                      launch('https://www.facebook.com/' + facebookHandle),
+                      launch('https://www.facebook.com/' + facebookHandle!),
                 ),
               ),
             ),
@@ -357,7 +357,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://instagram.com/' + instagram),
+                  onTap: () => launch('https://instagram.com/' + instagram!),
                 ),
               ),
             ),
@@ -382,7 +382,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://github.com/' + githubUserName),
+                  onTap: () => launch('https://github.com/' + githubUserName!),
                 ),
               ),
             ),
@@ -407,7 +407,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch(linkedinURL),
+                  onTap: () => launch(linkedinURL!),
                 ),
               ),
             ),
@@ -435,13 +435,13 @@ class ContactUsBottomAppBar extends StatelessWidget {
   ///Size of the font in bottomNavigationBar
   final double fontSize;
   /// font of text
-  final String textFont;
+  final String? textFont;
 
   ContactUsBottomAppBar(
-      {@required this.textColor,
-      @required this.backgroundColor,
-      @required this.email,
-      @required this.companyName,
+      {required this.textColor,
+      required this.backgroundColor,
+      required this.email,
+      required this.companyName,
       this.fontSize = 15.0,
       this.textFont,
       });
