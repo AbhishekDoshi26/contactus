@@ -78,6 +78,11 @@ class ContactUs extends StatelessWidget {
   /// divider color which is placed between the tagline & contact informations
   final Color? dividerColor;
 
+  /// divider thickness which is placed between the tagline & contact informations
+
+  final double? dividerThickness;
+
+
   ///font weight for tagline and company name
   final FontWeight? companyFontWeight;
   final FontWeight? taglineFontWeight;
@@ -113,6 +118,7 @@ class ContactUs extends StatelessWidget {
     this.companyFontWeight,
     this.taglineFontWeight,
     this.avatarRadius,
+    this.dividerThickness,
   });
 
   showAlert(BuildContext context) {
@@ -206,7 +212,7 @@ class ContactUs extends StatelessWidget {
             ),
             Divider(
               color: dividerColor ?? Colors.teal[200],
-              thickness: 4,
+              thickness: dividerThickness ?? 4.0,
               indent: 50.0,
               endIndent: 50.0,
             ),
