@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
           email: 'adoshi26.ad@gmail.com',
           companyName: 'Abhishek Doshi',
           phoneNumber: '+91123456789',
+          dividerThickness: 2,
           website: 'https://abhishekdoshi.godaddysites.com',
           githubUserName: 'AbhishekDoshi26',
           linkedinURL: 'https://www.linkedin.com/in/abhishek-doshi-520983199/',
