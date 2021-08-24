@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           email: 'adoshi26.ad@gmail.com',
           companyName: 'Abhishek Doshi',
           companyColor: Colors.teal.shade100,
+          dividerThickness: 2,
           phoneNumber: '+917818044311',
           website: 'https://abhishekdoshi.godaddysites.com',
           githubUserName: 'AbhishekDoshi26',

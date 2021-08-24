@@ -52,3 +52,6 @@ Updated Dependencies
 ## [1.1.8] - 23/03/2021
 Now, you can add custom fonts, font weight and divider color according to the theme of your product.
 
+## [1.1.9] - 28/04/2021
+- Migrate to null safety.
+- Added functionality to add custom thickness of divider.
