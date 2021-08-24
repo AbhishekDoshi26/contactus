@@ -55,3 +55,6 @@ Now, you can add custom fonts, font weight and divider color according to the th
 ## [1.1.9] - 28/04/2021
 - Migrate to null safety.
 - Added functionality to add custom thickness of divider.
+
+## [1.2.0] - 24/08/2021
+- Updated to latest package versions

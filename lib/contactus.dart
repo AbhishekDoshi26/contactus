@@ -82,10 +82,10 @@ class ContactUs extends StatelessWidget {
 
   final double? dividerThickness;
 
-
   ///font weight for tagline and company name
   final FontWeight? companyFontWeight;
   final FontWeight? taglineFontWeight;
+
   /// avatar radius will place the circularavatar according to developer/UI need
   final double? avatarRadius;
 
@@ -203,7 +203,7 @@ class ContactUs extends StatelessWidget {
                   color: taglineColor,
                   fontSize: 20.0,
                   letterSpacing: 2.0,
-                  fontWeight: taglineFontWeight?? FontWeight.bold,
+                  fontWeight: taglineFontWeight ?? FontWeight.bold,
                 ),
               ),
             ),
@@ -440,17 +440,18 @@ class ContactUsBottomAppBar extends StatelessWidget {
 
   ///Size of the font in bottomNavigationBar
   final double fontSize;
+
   /// font of text
   final String? textFont;
 
-  ContactUsBottomAppBar(
-      {required this.textColor,
-      required this.backgroundColor,
-      required this.email,
-      required this.companyName,
-      this.fontSize = 15.0,
-      this.textFont,
-      });
+  ContactUsBottomAppBar({
+    required this.textColor,
+    required this.backgroundColor,
+    required this.email,
+    required this.companyName,
+    this.fontSize = 15.0,
+    this.textFont,
+  });
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -462,7 +463,8 @@ class ContactUsBottomAppBar extends StatelessWidget {
       child: Text(
         'Designed and Developed by $companyName 💙\nWant to contact?',
         textAlign: TextAlign.center,
-        style: TextStyle(color: textColor, fontSize: fontSize, fontFamily: textFont),
+        style: TextStyle(
+            color: textColor, fontSize: fontSize, fontFamily: textFont),
       ),
       onPressed: () => launch('mailto:$email'),
     );
