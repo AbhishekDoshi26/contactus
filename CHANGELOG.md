@@ -58,3 +58,7 @@ Now, you can add custom fonts, font weight and divider color according to the th
 
 ## [1.2.0] - 24/08/2021
 - Updated to latest package versions
+
+## [1.2.1] - 25/02/2023
+- Updated to latest package versions
+- Refactored deprecated APIs

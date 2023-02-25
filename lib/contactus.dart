@@ -136,7 +136,7 @@ class ContactUs extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 InkWell(
-                  onTap: () => launch('tel:' + phoneNumber!),
+                  onTap: () => launchUrl(Uri.parse('tel:' + phoneNumber!)),
                   child: Container(
                     height: 50.0,
                     alignment: Alignment.center,
@@ -145,7 +145,7 @@ class ContactUs extends StatelessWidget {
                 ),
                 Divider(),
                 InkWell(
-                  onTap: () => launch('sms:' + phoneNumber!),
+                  onTap: () => launchUrl(Uri.parse('sms:' + phoneNumber!)),
                   child: Container(
                     alignment: Alignment.center,
                     height: 50.0,
@@ -154,7 +154,8 @@ class ContactUs extends StatelessWidget {
                 ),
                 Divider(),
                 InkWell(
-                  onTap: () => launch('https://wa.me/' + phoneNumber!),
+                  onTap: () =>
+                      launchUrl(Uri.parse('https://wa.me/' + phoneNumber!)),
                   child: Container(
                     alignment: Alignment.center,
                     height: 50.0,
@@ -240,7 +241,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch(website!),
+                  onTap: () => launchUrl(Uri.parse(website!)),
                 ),
               ),
             ),
@@ -288,7 +289,7 @@ class ContactUs extends StatelessWidget {
                     fontFamily: textFont,
                   ),
                 ),
-                onTap: () => launch('mailto:' + email),
+                onTap: () => launchUrl(Uri.parse('mailto:' + email)),
               ),
             ),
             Visibility(
@@ -312,7 +313,8 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://twitter.com/' + twitterHandle!),
+                  onTap: () => launchUrl(
+                      Uri.parse('https://twitter.com/' + twitterHandle!)),
                 ),
               ),
             ),
@@ -337,8 +339,8 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () =>
-                      launch('https://www.facebook.com/' + facebookHandle!),
+                  onTap: () => launchUrl(
+                      Uri.parse('https://www.facebook.com/' + facebookHandle!)),
                 ),
               ),
             ),
@@ -363,7 +365,8 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://instagram.com/' + instagram!),
+                  onTap: () => launchUrl(
+                      Uri.parse('https://instagram.com/' + instagram!)),
                 ),
               ),
             ),
@@ -388,7 +391,8 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch('https://github.com/' + githubUserName!),
+                  onTap: () => launchUrl(
+                      Uri.parse('https://github.com/' + githubUserName!)),
                 ),
               ),
             ),
@@ -413,7 +417,7 @@ class ContactUs extends StatelessWidget {
                       fontFamily: textFont,
                     ),
                   ),
-                  onTap: () => launch(linkedinURL!),
+                  onTap: () => launchUrl(Uri.parse(linkedinURL!)),
                 ),
               ),
             ),
@@ -457,7 +461,7 @@ class ContactUsBottomAppBar extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(
         backgroundColor: backgroundColor,
-        onSurface: Colors.grey,
+        disabledForegroundColor: Colors.grey.withOpacity(0.38),
         shadowColor: Colors.transparent,
       ),
       child: Text(
@@ -466,7 +470,7 @@ class ContactUsBottomAppBar extends StatelessWidget {
         style: TextStyle(
             color: textColor, fontSize: fontSize, fontFamily: textFont),
       ),
-      onPressed: () => launch('mailto:$email'),
+      onPressed: () => launchUrl(Uri.parse('mailto:$email')),
     );
   }
 }
