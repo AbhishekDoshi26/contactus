@@ -154,8 +154,18 @@ class ContactUs extends StatelessWidget {
                 ),
                 Divider(),
                 InkWell(
-                  onTap: () =>
-                      launchUrl(Uri.parse('https://wa.me/' + phoneNumber!)),
+                  onTap: () {
+                    final url = Uri.parse(
+                      'https://wa.me/' +
+                          r'+' +
+                          phoneNumber!.substring(
+                            1,
+                            phoneNumber!.length,
+                          ),
+                    );
+                    print(url);
+                    launchUrl(url);
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     height: 50.0,
