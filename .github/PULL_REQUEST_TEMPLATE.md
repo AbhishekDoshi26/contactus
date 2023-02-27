@@ -17,7 +17,7 @@
 - [ ] ✨ Ran `dartdoc`
 - [ ] 🛠️ Added proper documentation
 - [ ] ❌ No warnings or errors in the code
-- [ ] ✅ If added a new extension, added in Readme and example too
+- [ ] ✅ If added a new parameter, added in Readme and example too
 
 ## Type of Change
 
