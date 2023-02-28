@@ -66,3 +66,6 @@ Now, you can add custom fonts, font weight and divider color according to the th
 ## [1.2.2] - 28/02/2023
 - Fixed WhatsApp issue
 - Updated example to latest Flutter version
+
+## [1.2.3] - 28/02/2023
+- Fixed WhatsApp issue

@@ -157,14 +157,13 @@ class ContactUs extends StatelessWidget {
                   onTap: () {
                     final url = Uri.parse(
                       'https://wa.me/' +
-                          r'+' +
                           phoneNumber!.substring(
                             1,
                             phoneNumber!.length,
                           ),
                     );
                     print(url);
-                    launchUrl(url);
+                    launchUrl(url, mode: LaunchMode.externalApplication);
                   },
                   child: Container(
                     alignment: Alignment.center,

@@ -2,7 +2,7 @@ name: contactus
 description: contactus is the package which helps the developers to add their
   contact information with ease.Developers can add many important details such
   as website, email, phone number, etc.
-version: 1.2.2
+version: 1.2.3
 repository: https://github.com/AbhishekDoshi26/contactus
 homepage: https://abhishekdoshi.netlify.app
 
