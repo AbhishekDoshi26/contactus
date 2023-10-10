@@ -42,6 +42,9 @@ class ContactUs extends StatelessWidget {
   ///Github User Name of the company/individual
   final String? githubUserName;
 
+  ///Tiktok URL of the comapny/individual
+  final String? tiktokUrl;
+
   ///Name of the Company/individual
   final String companyName;
 
@@ -108,6 +111,7 @@ class ContactUs extends StatelessWidget {
     this.facebookHandle,
     this.linkedinURL,
     this.githubUserName,
+    this.tiktokUrl,
     this.tagLine,
     this.instagram,
     this.companyFontSize,
@@ -427,6 +431,31 @@ class ContactUs extends StatelessWidget {
                     ),
                   ),
                   onTap: () => launchUrl(Uri.parse(linkedinURL!)),
+                ),
+              ),
+            ),
+            Visibility(
+              visible: tiktokUrl != null,
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                color: cardColor,
+                child: ListTile(
+                  leading: Icon(Icons.tiktok),
+                  title: Text(
+                    'Tiktok',
+                    style: TextStyle(
+                      color: textColor,
+                      fontFamily: textFont,
+                    ),
+                  ),
+                  onTap: () => launchUrl(Uri.parse(tiktokUrl!)),
                 ),
               ),
             ),
