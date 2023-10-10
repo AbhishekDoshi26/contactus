@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
           twitterHandle: 'AbhishekDoshi26',
           instagram: '_abhishek_doshi',
           facebookHandle: '_abhishek_doshi',
+          tiktokUrl: "https://www.tiktok.com/@AbhishekDoshi26",
         ),
       ),
     );
