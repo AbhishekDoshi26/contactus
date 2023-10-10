@@ -15,7 +15,7 @@ Developers can add following details:<br>
 	<li>Facebook ID</li>
 	<li>Linkedin URL</li>
 	<li>Github UserName</li>
-  <li>Tiktok Username</li>
+  	<li>Tiktok Username</li>
 </ul>
 <br><br>
 Best feature is that, when the user clicks on any detail, respective app/web page will be opened.<br><br>
