@@ -24,7 +24,7 @@ Best feature is that, when the user clicks on any detail, respective app/web pag
 <h3>Example Code for creating an entire page</h3>
 <br><br>
 
-```
+```dart
 import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +51,12 @@ class MyApp extends StatelessWidget {
           tagLine: 'Flutter Developer',
           twitterHandle: 'AbhishekDoshi26',
           instagramUserName: '_abhishek_doshi',
+          customSocials: [
+            CustomSocialField(
+                icon: const Icon(Icons.abc),
+                name: "karna.satva",
+                url: "https://discordapp.com/users/712546092612583424"),
+          ],
         ),
       ),
     );
