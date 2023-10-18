@@ -94,6 +94,8 @@ class ContactUs extends StatelessWidget {
   /// avatar radius will place the circularavatar according to developer/UI need
   final double? avatarRadius;
 
+  /// a list of [CustomField] which can be used to add custom socials which are
+  /// not offered by default parameters
   final List<CustomField>? customSocials;
 
   ///Constructor which sets all the values.
