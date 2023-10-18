@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'models/custom_field.dart';
+
 ///Class for adding contact details/profile details as a complete new page in your flutter app.
 class ContactUs extends StatelessWidget {
   ///Logo of the Company/individual
@@ -92,6 +94,8 @@ class ContactUs extends StatelessWidget {
   /// avatar radius will place the circularavatar according to developer/UI need
   final double? avatarRadius;
 
+  final List<CustomField>? customSocials;
+
   ///Constructor which sets all the values.
   ContactUs({
     required this.companyName,
@@ -123,6 +127,7 @@ class ContactUs extends StatelessWidget {
     this.taglineFontWeight,
     this.avatarRadius,
     this.dividerThickness,
+    this.customSocials,
   });
 
   showAlert(BuildContext context) {
@@ -456,6 +461,30 @@ class ContactUs extends StatelessWidget {
                     ),
                   ),
                   onTap: () => launchUrl(Uri.parse(tiktokUrl!)),
+                ),
+              ),
+            ),
+            ...(customSocials ?? []).map(
+              (e) => Card(
+                clipBehavior: Clip.antiAlias,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                color: cardColor,
+                child: ListTile(
+                  leading: e.icon,
+                  title: Text(
+                    e.name,
+                    style: TextStyle(
+                      color: textColor,
+                      fontFamily: textFont,
+                    ),
+                  ),
+                  onTap: () => launchUrl(Uri.parse(e.url)),
                 ),
               ),
             ),
