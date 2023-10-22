@@ -54,8 +54,9 @@ class MyApp extends StatelessWidget {
           customSocials: [
             CustomSocialField(
                 icon: const Icon(Icons.abc),
-                name: "karna.satva",
-                url: "https://discordapp.com/users/712546092612583424"),
+                name: "Username",
+                url: "Profile Url",
+              ),
           ],
         ),
       ),

@@ -40,9 +40,10 @@ class MyApp extends StatelessWidget {
           tiktokUrl: "https://www.tiktok.com/@AbhishekDoshi26",
           customSocials: [
             CustomSocialField(
-                icon: const Icon(Icons.abc),
-                name: "karna.satva",
-                url: "https://discordapp.com/users/712546092612583424"),
+              icon: const Icon(Icons.abc),
+              name: "Username",
+              url: "Profile Url",
+            ),
           ],
         ),
       ),

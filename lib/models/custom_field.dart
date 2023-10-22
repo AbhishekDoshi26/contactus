@@ -5,6 +5,9 @@ class CustomSocialField {
   final String name;
   final String url;
 
-  CustomSocialField(
-      {required this.icon, required this.name, required this.url});
+  CustomSocialField({
+    required this.icon,
+    required this.name,
+    required this.url,
+  });
 }
