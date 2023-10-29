@@ -1,4 +1,5 @@
 import 'package:contactus/contactus.dart';
+import 'package:contactus/models/custom_field.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -37,6 +38,13 @@ class MyApp extends StatelessWidget {
           instagram: '_abhishek_doshi',
           facebookHandle: '_abhishek_doshi',
           tiktokUrl: "https://www.tiktok.com/@AbhishekDoshi26",
+          customSocials: [
+            CustomSocialField(
+              icon: const Icon(Icons.abc),
+              name: "Username",
+              url: "Profile Url",
+            ),
+          ],
         ),
       ),
     );
